@@ -5,12 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "backitup"
-    gem.summary = %Q{one-line summary of your gem}
-    gem.description = %Q{longer description of your gem}
+    gem.summary = %Q{A Backup Tool built on Ruby}
+    gem.description = %Q{TDB}
     gem.email = "utkarsh2012@gmail.com"
     gem.homepage = "http://github.com/utkarsh2012/backitup"
     gem.authors = ["Utkarsh Sengar"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    # gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

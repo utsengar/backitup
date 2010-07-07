@@ -1,6 +1,6 @@
 = backitup
 
-Description goes here.
+A Backup Tool built on Ruby
 
 == Note on Patches/Pull Requests
  
