@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors = ["Utkarsh Sengar"]
   s.date = %q{2010-07-06}
   s.default_executable = %q{sample.rb}
-  s.description = %q{TDB}
+  s.description = %q{A Backup Tool built on Ruby}
   s.email = %q{utkarsh2012@gmail.com}
   s.executables = ["sample.rb"]
   s.extra_rdoc_files = [
@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
      "bin/sample.rb",
      "lib/backitup.rb",
      "pkg/backitup-.gem",
+     "pkg/backitup-0.0.0.gem",
      "test/helper.rb",
      "test/test_backitup.rb"
   ]
