@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{backitup}
-  s.version = ""
+  s.version = "0.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Utkarsh Sengar"]
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "LICENSE",
      "README.rdoc",
      "Rakefile",
+     "VERSION",
      "backitup.gemspec",
      "bin/sample.rb",
      "lib/backitup.rb",

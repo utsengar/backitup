@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "backitup"
     gem.summary = %Q{A Backup Tool built on Ruby}
-    gem.description = %Q{TDB}
+    gem.description = %Q{A Backup Tool built on Ruby}
     gem.email = "utkarsh2012@gmail.com"
     gem.homepage = "http://github.com/utkarsh2012/backitup"
     gem.authors = ["Utkarsh Sengar"]
