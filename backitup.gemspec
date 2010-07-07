@@ -10,8 +10,10 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Utkarsh Sengar"]
   s.date = %q{2010-07-06}
+  s.default_executable = %q{sample.rb}
   s.description = %q{longer description of your gem}
   s.email = %q{utkarsh2012@gmail.com}
+  s.executables = ["sample.rb"]
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -23,6 +25,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "backitup.gemspec",
+     "bin/sample.rb",
      "lib/backitup.rb",
      "test/helper.rb",
      "test/test_backitup.rb"
