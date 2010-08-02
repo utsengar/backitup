@@ -2,6 +2,16 @@
 
 A Backup Tool built on Ruby
 
+== How to use
+* ruby backitup.rb "absolute-folder-path" "time"
+
+time should be passed in 24hrs format.
+
+
+* For example, if you need to backup a folder ruby on your Desktop, everyday at 11PM, then:
+  ruby backitup.rb "/Users/utkarsh/Desktop/ruby" "2300"
+
+
 == Note on Patches/Pull Requests
  
 * Fork the project.

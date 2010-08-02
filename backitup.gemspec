@@ -9,11 +9,11 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Utkarsh Sengar"]
-  s.date = %q{2010-07-06}
-  s.default_executable = %q{sample.rb}
+  s.date = %q{2010-08-01}
+  s.default_executable = %q{demo.rb}
   s.description = %q{A Backup Tool built on Ruby}
   s.email = %q{utkarsh2012@gmail.com}
-  s.executables = ["sample.rb"]
+  s.executables = ["demo.rb"]
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -26,8 +26,13 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "backitup.gemspec",
-     "bin/sample.rb",
-     "lib/backitup.rb",
+     "backitup.rb",
+     "bin/demo.rb",
+     "lib/gui/players/sample.rb",
+     "lib/gui/props.rb",
+     "lib/gui/styles.rb",
+     "lib/helpers.rb",
+     "lib/test.rb",
      "pkg/backitup-.gem",
      "pkg/backitup-0.0.0.gem",
      "test/helper.rb",

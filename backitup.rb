@@ -6,12 +6,15 @@ include Helpers
 class Backitup
   
   def main
+    
+    folderPath = ARGV[0]
+    time = ARGV[1]
   
-  puts "Please give the full path of the folder"
-  STDOUT.flush  
-  folderPath = gets.chomp
-  puts "Please give the time you want BackItUp to backup the data everyday (24hr format: 0230 means 2:30AM)"
-  time = gets.chomp
+  # puts "Please give the full path of the folder"
+  # STDOUT.flush  
+  # folderPath = gets.chomp
+  # puts "Please give the time you want BackItUp to backup the data everyday (24hr format: 0230 means 2:30AM)"
+  # time = gets.chomp
   checkTime(time.to_s, folderPath)
   end
 end
