@@ -8,7 +8,6 @@ module Helpers
       require 'fileutils'
       
       creationTime = Time.now
-      puts "I AM IN CREATEZIP"
       new_zip_file = folderPath+"/Backup:" + creationTime.strftime("%Y-%m-%d").to_s + ".zip"
       
       if(!File.exists?(new_zip_file))
@@ -22,8 +21,12 @@ module Helpers
       end
     end
       
-    #Check time and create backup, input time in format HHMM
-    def checkTime(inputTime, folderPath)
+    #Check time and create backup, input time in format HH:MM
+    def checkTime(inputTime, folderPath, duration)
+      require 'Date'
+      
+      #Get kill date
+      killDate = Date.today + duration.to_i
       
       #Check the differnce of current time and input time and sleep for the difference - one time only START
       hourSleep = Time.now.hour.to_s
@@ -36,7 +39,7 @@ module Helpers
       sleep(totalSeconds-10)
       #Check the differnce of current time and input time and sleep for the difference - one time only END
       
-      while(true)
+      while(Date.today != killDate)
         hour = Time.now.hour.to_s
         minutes = Time.now.min.to_s
         if(minutes.length == 1)

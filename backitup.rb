@@ -6,13 +6,19 @@ include Helpers
 
 class Backitup
   def main
-    folderPath = ARGV[0]
-    time = ARGV[1]
-    if folderPath.nil? || time.nil?
+    folderPath = ARGV[0] #folder  path
+    time = ARGV[1] #time in HH:MM format
+    duration = ARGV[2]   #In days
+    if folderPath.nil? || time.nil? || duration.nil?
       puts "Please enter all the required parameters"
     else
+      options = {
+        :backtrace  => true,
+        :ontop      => false
+      }
+      
       Daemons.daemonize
-      checkTime(time.to_s, folderPath)
+      checkTime(time.to_s, folderPath, duration)
     end
   end
 end
