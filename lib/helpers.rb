@@ -35,26 +35,24 @@ module Helpers
       inputTimeForSleep = inputTime.split(':')
       diffHour = (inputTimeForSleep[0].to_i - hourSleep.to_i).abs
       diffMin = (inputTimeForSleep[1].to_i - minutesSleep.to_i).abs
-      if(diffHour == 24)
-        diffHour = 0
-      end
-      if(diffMin == 60)
-        diffMin = 0
-      end
       totalSeconds = diffHour*60*60 + diffMin*60 #seconds is not considered, so the wakeup won't be on the exact second
-      
       sleep(totalSeconds)
       #Check the differnce of current time and input time and sleep for the difference - one time only END
       
-      puts "in checkTime"
       
-      while(Date.today != killDate)
-              puts "in while"
+      while(Date.today < killDate)
         hour = Time.now.hour.to_s
         minutes = Time.now.min.to_s
+        
+        #if the value of min or hr is 1 or 2..9,then append 0. So, it becomes 01, 02..09
         if(minutes.length == 1)
-        minutes = "0" + minutes
+          minutes = "0" + minutes
         end
+        if(hour.length == 1)
+          hour = "0" + hour
+        end
+        
+        #set current time format
         currentTime = hour + ":" + minutes
         
         #Call the create zip method once a day

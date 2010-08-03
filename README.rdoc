@@ -7,9 +7,12 @@ A Backup Tool built on Ruby
 
 time should be passed in 24hrs format.
 
+For example, if you need to backup a folder ruby on your Desktop, everyday at 11:00PM for 5 days then:
 
-* For example, if you need to backup a folder ruby on your Desktop, everyday at 11:00PM for 5 days then:
-  ruby backitup.rb "/Users/utkarsh/Desktop/ruby" "23:00" "5"
+* ruby backitup.rb "/Users/utkarsh/Desktop/ruby" "23:00" "5"
+
+If backup should be on ruby folder everyday at 12:30AM for 2 days then:
+* ruby backitup.rb "/Users/utkarsh/Desktop/ruby" "00:30" "2"
 
 
 ==TODO
