@@ -35,11 +35,21 @@ module Helpers
       inputTimeForSleep = inputTime.split(':')
       diffHour = (inputTimeForSleep[0].to_i - hourSleep.to_i).abs
       diffMin = (inputTimeForSleep[1].to_i - minutesSleep.to_i).abs
-      totalSeconds = diffHour*60*60 + diffMin*60
-      sleep(totalSeconds-10)
+      if(diffHour == 24)
+        diffHour = 0
+      end
+      if(diffMin == 60)
+        diffMin = 0
+      end
+      totalSeconds = diffHour*60*60 + diffMin*60 #seconds is not considered, so the wakeup won't be on the exact second
+      
+      sleep(totalSeconds)
       #Check the differnce of current time and input time and sleep for the difference - one time only END
       
+      puts "in checkTime"
+      
       while(Date.today != killDate)
+              puts "in while"
         hour = Time.now.hour.to_s
         minutes = Time.now.min.to_s
         if(minutes.length == 1)
